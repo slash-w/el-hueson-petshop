@@ -141,3 +141,24 @@
     font-weight: bold;
     margin: 0;
 }
+
+@media only screen and (min-width:320px) and (max-width: 767px){
+    .formulario{
+        height: 40rem;
+        width: 18rem;
+    }
+    .contc{
+        font-size: 0.8rem;
+    }
+    .margin{
+        margin-left: 1rem;
+    }
+    .alargar{
+        width: 15rem;
+    }
+    .mapa{
+        height: 5rem;
+        width: 5rem;
+        object-fit: contain;
+    }
+}
