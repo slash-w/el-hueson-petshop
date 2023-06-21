@@ -3,7 +3,9 @@ const destacados = document.getElementById("destacados-container");
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const noResultsMessage = document.getElementById("no-results-message");
-
+// modificado samuel
+const ARRAY_CARRITO = [];
+// fin modificacion samuel
 function imprimirCards(cards, container) {
   let plantilla = "";
   for (const card of cards) {
@@ -16,7 +18,7 @@ function imprimirCards(cards, container) {
         <div class="card-body">
             <div class="card-header">
                 <h5 class="card-price">$${card.precio}</h5>
-                <button class="add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                <button class="add-to-cart" data-id="${card._id}"><i class="fa-solid fa-cart-plus"></i></button>
             </div>
             <p class="card-text">
                 <span class="disponibilidad disponible">${card.producto}</span><br>
@@ -26,6 +28,26 @@ function imprimirCards(cards, container) {
     </div>`;
   }
   container.innerHTML = plantilla;
+  // modificado samuel
+  const carritoButton = container.querySelectorAll(".add-to-cart");
+  carritoButton.forEach((button) => {
+    button.addEventListener("click", () => {
+      const cardId = button.dataset.id;
+      const selectedCard = cards.find((card) => card._id === cardId);
+      const existingIndex = ARRAY_CARRITO.findIndex(
+        (card) => card._id === selectedCard._id
+      );
+      if (existingIndex !== -1) {
+        ARRAY_CARRITO.splice(existingIndex, 1);
+        console.log(ARRAY_CARRITO);
+      } else {
+        ARRAY_CARRITO.push(selectedCard);
+        console.log(ARRAY_CARRITO);
+      }
+      localStorage.setItem("carrito", JSON.stringify(ARRAY_CARRITO));
+    });
+  });
+  // fin modificacion samuel
 }
 
 function mostrarCard(data) {
@@ -71,4 +93,4 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
   })
   .catch((err) => console.log(err));
 
-  searchButton.addEventListener("click", filtrarProductos);
+searchButton.addEventListener("click", filtrarProductos);

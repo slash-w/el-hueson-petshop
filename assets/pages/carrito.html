@@ -21,41 +21,31 @@
 <body>
     <header>
         <!--        PC NAVBAR       -->
-      <div class="pc-nav ctt-gradient">
-          <img class="logo" src="../images/petshop_logo.png" alt="logo">
-          <div class="busqueda">
-              <nav class="nav-links">
-                  <div class="dropdown">
-                      <a class="mydropdown dropdown-toggle text-contrast" href="#" role="button" id="dropdownMenuLink"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Categorias
-                      </a>
-                  </div>
-                  <a class="text-contrast" href="../../index.html">Tienda <i class="fa-solid fa-shop"></i></a>
-                  <a class="text-contrast" href="./contact.html">Contact <i class="fa-solid fa-address-book"></i></a>
-                  <a class="text-contrast" href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a>
-              </nav>
-          </div>
-      </div>
+        <div class="pc-nav ctt-gradient">
+            <img class="logo" src="../images/petshop_logo.png" alt="logo">
+            <div class="busqueda">
+                <nav class="nav-links">
+                    <a class="text-contrast" href="../../index.html">Tienda <i class="fa-solid fa-shop"></i></a>
+                    <a class="text-contrast" href="./contact.html">Contact <i class="fa-solid fa-address-book"></i></a>
+                    <a class="text-contrast" href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a>
+                </nav>
+            </div>
+        </div>
 
-      <!--        MOBILE NAVBAR       -->
-      <div class="mobile-nav">
-          <input id="toggle" type="checkbox" checked>
-          <label class="toggle-nav" for="toggle"><img class="hamburguer ctt-gradient"
-                  src="../images/iconos/three-bars-white.png"></label>
+        <!--        MOBILE NAVBAR       -->
+        <div class="mobile-nav">
+            <input id="toggle" type="checkbox" checked>
+            <label class="toggle-nav" for="toggle"><img class="hamburguer ctt-gradient"
+                    src="../images/iconos/three-bars-white.png"></label>
 
-          <nav class="vertical-nav">
-              <div class="dropdown mobile-anchor ctt-gradient">
-                  <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Categorias
-                  </a>
-              </div>
-              <a class="mobile-anchor ctt-gradient" href="../../index.html">Tienda <i class="fa-solid fa-shop"></i></a>
-              <a class="mobile-anchor ctt-gradient" href="./contact.html">Contact <i class="fa-solid fa-address-book"></i></a>
-              <a class="mobile-anchor ctt-gradient" href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a>
-          </nav>
-      </div>
+            <nav class="vertical-nav">
+                <a class="mobile-anchor ctt-gradient" href="../../index.html">Tienda <i
+                        class="fa-solid fa-shop"></i></a>
+                <a class="mobile-anchor ctt-gradient" href="./contact.html">Contact <i
+                        class="fa-solid fa-address-book"></i></a>
+                <a class="mobile-anchor ctt-gradient" href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
+        </div>
     </header>
     <div class="card">
         <div id="cart">
@@ -71,8 +61,7 @@
             <div>
                 <h2>Resumen</h2>
             </div>
-
-            <form>
+            <form id="summaryForm">
                 <p>Datos de envio:</p>
                 <input id="summaryInput" placeholder="Nombre y apellido" />
                 <input id="summaryInput" placeholder="Direccion" />
@@ -91,7 +80,7 @@
                 <div class="col">Precio total</div>
                 <div class="col" id="cartPrice"></div>
             </div>
-            <button class="btn">COMPRAR</button>
+            <button class="btn" onclick="submitForm()">COMPRAR</button>
         </div>
     </div>
     <footer class="ctt-gradient">

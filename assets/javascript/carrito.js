@@ -1,3 +1,4 @@
+let carrito = JSON.parse(localStorage.getItem("carrito")) ?? [];
 
 function createCartItem(producto) {
   const container = document.getElementById("cart");
@@ -59,6 +60,8 @@ function createCartItem(producto) {
   closeSpan.classList.add("close");
 
   closeSpan.addEventListener("click", () => {
+    carrito = carrito.filter((item) => item._id != producto._id);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     container.removeChild(row);
     updateProductCount();
     updateCartPrice();
@@ -101,7 +104,7 @@ function createCartItem(producto) {
   container.appendChild(row);
 }
 
-const ARRAY_CARRITO = ["63a28d36cc6fff6724518aa3"]; // Example array in detalles.js
+
 const productCountLabel = document.getElementById("productCount");
 const cartPriceElement = document.getElementById("cartPrice");
 
@@ -130,9 +133,18 @@ function updateCartPrice() {
   cartPriceElement.textContent = `$ ${totalPrice.toFixed(2)}`;
 }
 
-ARRAY_CARRITO.forEach((producto) => {
+function updateLocalStorage() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+console.log(carrito);
+carrito.forEach((producto) => {
   createCartItem(producto);
 });
+
+function submitForm() {
+  alert("Muchas gracias por tu compra! Pronto nos pondremos en contacto contigo."); 
+  document.getElementById("summaryForm").reset(); 
+}
 
 updateProductCount();
 updateCartPrice();

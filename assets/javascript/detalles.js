@@ -1,7 +1,7 @@
 const $detalleCard = document.getElementById("detalleCard");
 let colorIndex = 0;
 let textIndex = 0;
-const colors = ["#ffffff", "black"];
+const colors = ["#ffffff", "red"];
 const colors2 = ["#f24c3d", "#22a699"];
 const textComprar = ["Añadir al carrito", "Añadido exitosamente"];
 const ARRAY_CARRITO = [];
@@ -14,23 +14,22 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
   .then((data) => {
     const idEncontrado = data.find((data) => data._id == id);
     $detalleCard.innerHTML = `
-<div class="details-card">
-    <img src="${idEncontrado.imagen}" class="details-image" alt="..." />
-    <div class="texto-detalles">
-        <div class="nameLike p-gradient">
-            <h5 class="card-title">${idEncontrado.producto}</h5>
-            <i class="icon bi bi-heart-fill fs-2" id="corazon"></i>
+    <div class="details-card">
+        <img src="${idEncontrado.imagen}" class="details-image" alt="..." />
+        <div class="texto-detalles">
+            <div class="nameLike p-gradient">
+                <h5 class="card-title">${idEncontrado.producto}</h5>
+            </div>
+            <div class="info">
+                <p class="card-text" id="price">$ ${idEncontrado.precio}</p>
+                <p class="card-text" id="Disponibles">Disponibles: ${idEncontrado.disponibles}</p>
+            </div>
+            <p class="card-text" id="description">
+                ${idEncontrado.descripcion}
+            </p>
+            <button class="p-gradient" id="comprar">Añadir al carrito</button>
         </div>
-        <div class="info">
-            <p class="card-text" id="price">$ ${idEncontrado.precio}</p>
-            <p class="card-text" id="Disponibles">Disponibles: ${idEncontrado.disponibles}</p>
-        </div>
-        <p class="card-text" id="description">
-            ${idEncontrado.descripcion}
-        </p>
-        <button class="p-gradient" id="comprar">Añadir al carrito</button>
-    </div>
-</div>`;
+    </div>`;
     const corazon = $detalleCard.querySelector("#corazon");
     corazon.addEventListener("click", () => {
       colorIndex = (colorIndex + 1) % colors.length;
@@ -56,8 +55,9 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
       } else {
         ARRAY_CARRITO.push(idEncontrado);
       }
+      localStorage.setItem("carrito", JSON.stringify(ARRAY_CARRITO));
     });
     console.log(ARRAY_FAVORITO);
-    console.log(ARRAY_CARRITO);
+    console.log("ARRAY_CARRITO", ARRAY_CARRITO);
   })
   .catch((err) => console.log(err));

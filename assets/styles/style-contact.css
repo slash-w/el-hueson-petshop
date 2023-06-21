@@ -24,13 +24,14 @@
   }
   
   a {
-    color: var(--clr-blue-link);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: var(--clr-gradient2);
-  }
+    color: var(--clr-blue-link) !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--clr-gradient2) !important;
+}
+
   
   body {
     background-color: var(--background-clr);
@@ -445,6 +446,10 @@
         border-radius: 0.5rem;
     }
   }
+
+  .my-custom-button-class{
+    background-color: var(--clr-gradient2) !important;
+}
     
   
   
