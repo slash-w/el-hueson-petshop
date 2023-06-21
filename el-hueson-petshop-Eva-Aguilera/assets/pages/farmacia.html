@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link rel="icon" href="../images/carousel/logoHueson.svg">
+    <title>El Hueson - Farmacia</title>
+</head>
+
+<body>
+    <!--        HEADER      -->
+    <header>
+        <div class="top-page">
+            <div class="header">
+                <img class="petshop-logo" src="../images/carousel/logoHueson.svg" alt="img">
+                <div class="busqueda">
+                    <form class="d-flex search-box-form" role="search">
+                        <input id="searchInput" class="search-box" type="search"
+                            placeholder="Buscar productos, marcas y mas" aria-label="Search">
+                        <button id="searchButton" class="search-button" type="submit">Search</button>
+                    </form>
+                    <nav>
+                        <div class="dropdown">
+                            <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorias
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div id="jugueteriacontainer"><li><a class="dropdown-item" href="../pages/jugueteria.html">Jugueteria</a></li></div>
+                        <div id="farmaciacontainer"><li><a class="dropdown-item" href="../pages/farmacia.html">Farmacia</a></li></div>
+                            </ul>
+                        </div>
+                        <a href="/index.html">Tienda <i class="fa-solid fa-shop"></i></a>
+                        <a href="#">Contact <i class="fa-solid fa-address-book"></i></a>
+                        <a href="#">Mis compras <i class="fa-solid fa-cart-shopping"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--        Main        -->
+    <main>
+        <!--        Carousel        -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#fs-pago"><img src="../images/carousel/pet-shop.jpg"
+                            class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#fs-pago"><img src="../images/carousel/Jugueteria.jpg"
+                            class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#fs-pago"><img src="../images/carousel/Farmacia.jpg"
+                            class="d-block w-100" alt="..."></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!--      Pagos       -->
+        <div class="pagos" id="fs-pago">
+            <h5>Nuestros medios de pago</h5>
+            <div class="medios-de-pago">
+                <div class="fdpago">
+                    <div class="dropdown">
+                        <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span>Tarjeta de credito</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <p class="dropdown-item" href="#">Visa</p>
+                            </li>
+                            <li>
+                                <p class="dropdown-item" href="#">Mastercard</p>
+                            </li>
+                            <li>
+                                <p class="dropdown-item" href="#">Naranja</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fdpago">
+                    <div class="dropdown">
+                        <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-credit-card"></i>
+                            <span>Tarjeta de debito</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <p class="dropdown-item" href="#">Visa (debito)</p>
+                            </li>
+                            <li>
+                                <p class="dropdown-item" href="#">Mastercard (debito)</p>
+                            </li>
+                            <li>
+                                <p class="dropdown-item" href="#">Ualá</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fdpago">
+                    <div class="dropdown">
+                        <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                            <span>Cuotas sin Tarjeta</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <p class="dropdown-item" href="#">1 cuotas</p>
+                            </li>
+                            <li>
+                                <p class="dropdown-item" href="#">2 cuotas</p>
+                            </li>
+                            <li>
+                                <p class="dropdown-item" href="#">3 cuotas</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fdpago">
+                    <div class="dropdown">
+                        <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <span>Efectivo</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <p class="dropdown-item" href="#">Rapipago</p>
+                            </li>
+                            <li>
+                                <p class="dropdown-item" href="#">Pagofacil</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--      Destacados     -->
+        <div class="destacados">
+            <div class="p-gradient">
+                <p class="suscribite">Productos destacados</p>
+            </div>
+            <div class="destacados-container" id="destacadoscontainer"></div>
+        </div>
+
+        <!--        PRODUCTOS TIENDA        -->
+        <div class="destacados tienda">
+            <div class="p-gradient">
+                <p class="suscribite">Tienda</p>
+            </div>
+            <div class="destacados-container tienda" id="productoscontainer"></div>
+            <p id="no-results-message" class="text-center" style="display: none;">
+                Lo sentimos, no encontramos resultados para tu búsqueda.
+              </p>
+        </div>
+        
+    </main> 
+
+    <!--        Footer      -->
+    <footer>
+        <div class="footer-info">
+            <img src="../images/footer/payment.svg" alt="footer info">
+            <p class="finfo-title">Elegi como pagar</p>
+            <p class="finfo-text">Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con Mercado
+                Crédito.</p>
+            <a class="finfo-a" href="#fs-pago">Como pagar tus compras</a>
+        </div>
+
+
+        <div class="footer-info">
+            <img src="../images/footer/shipping.svg" alt="footer info">
+            <p class="finfo-title">Seguridad de calidad</p>
+            <p class="finfo-text">¿Vino fallido? ¡Devolvelo! En El Hueson, te tenemos en cuenta,
+                contactanos y nos aseguraremos de tu reembolso.</p>
+            <a class="finfo-a" href="#">Contactanos</a> <!--href to contact-->
+        </div>
+
+        <div class="footer-info">
+            <iframe class="imap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2432189099077!2d-58.40606631503542!3d-34.59801078745169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0xafb5fe117a2c5a52!2sParaguay%202334%2C%20C1121ABL%20CABA!5e0!3m2!1sen!2sar!4v1687277570057!5m2!1sen!2sar"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a class="finfo-a" href="https://goo.gl/maps/81XxLMXSjaaveBPq9">Paraguay 2334 5F</a><!--Paraguay 2334 5 F-->
+        </div>
+
+    </footer>
+    <!--        Scripts         -->
+        <script src="../javascript/farmacia.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cebc15b299.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
