@@ -267,8 +267,10 @@ header {
 }
 
 .card-header{
+    padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     background-color: transparent;
     box-shadow: none;
     border: 0;
