@@ -15,33 +15,55 @@
 <body>
     <!--        HEADER      -->
     <header>
-        <div class="top-page">
-            <div class="header">
-                <img class="petshop-logo" src="./assets/images/petshop_logo.png">
-                <div class="busqueda">
-                    <form class="d-flex search-box-form" role="search">
-                        <input class="search-box" type="search"
-                            placeholder="Buscar productos, marcas y mas" aria-label="Search">
-                        <button class="search-button" type="submit">Search</button>
-                    </form>
-                    <nav>
-                        <div class="dropdown">
-                            <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorias
-                            </a>
-
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Jugueteria</a></li>
-                                <li><a class="dropdown-item" href="#">Farmacia</a></li>
-                            </ul>
-                        </div>
-                        <a href="#">Tienda <i class="fa-solid fa-shop"></i></a>
-                        <a href="#">Contact <i class="fa-solid fa-address-book"></i></a>
-                        <a href="#">Mis compras <i class="fa-solid fa-cart-shopping"></i></a>
-                    </nav>
+        <!--        PC NAVBAR       -->
+        <div class="pc-nav ctt-gradient">
+            <img class="logo" src="./assets/images/petshop_logo.png" alt="logo">
+            <div class="busqueda">
+                <div class="mysearch">
+                    <input type="search" id="search-input">
+                    <button type="submit" id="search-button">Buscar</button>
                 </div>
+                <nav class="nav-links">
+                    <div class="dropdown">
+                        <a class="mydropdown dropdown-toggle text-contrast" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="?cat=jugueteria">Jugueteria</a></li>
+                            <li><a class="dropdown-item" href="?cat=farmacia">Farmacia</a></li>
+                        </ul>
+                    </div>
+                    <a class="text-contrast" href="#">Tienda <i class="fa-solid fa-shop"></i></a>
+                    <a class="text-contrast" href="#">Contact <i class="fa-solid fa-address-book"></i></a>
+                    <a class="text-contrast" href="#">Mis compras <i class="fa-solid fa-cart-shopping"></i></a>
+                </nav>
             </div>
+        </div>
+
+        <!--        MOBILE NAVBAR       -->
+        <div class="mobile-nav">
+            <input id="toggle" type="checkbox" checked>
+            <label class="toggle-nav" for="toggle"><img class="hamburguer ctt-gradient"
+                    src="./assets/images/iconos/three-bars-white.png"></label>
+
+            <nav class="vertical-nav">
+                <div class="dropdown mobile-anchor ctt-gradient">
+                    <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorias
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="?cat=jugueteria">Jugueteria</a></li>
+                        <li><a class="dropdown-item" href="?cat=farmacia">Farmacia</a></li>
+                    </ul>
+                </div>
+                <a class="mobile-anchor ctt-gradient" href="?#">Tienda <i class="fa-solid fa-shop"></i></a>
+                <a class="mobile-anchor ctt-gradient" href="#">Contact <i class="fa-solid fa-address-book"></i></a>
+                <a class="mobile-anchor ctt-gradient" href="#">Mis compras <i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
         </div>
     </header>
 
@@ -77,7 +99,6 @@
 
         <!--      Pagos       -->
         <div class="pagos" id="fs-pago">
-            <h5>Nuestros medios de pago</h5>
             <div class="medios-de-pago">
                 <div class="fdpago">
                     <div class="dropdown">
@@ -173,7 +194,10 @@
                         <img src="./assets/images/main/rueda.png" class="card-img-top" alt="rueda">
                     </a>
                     <div class="card-body">
-                        <h5 class="card-price">$ 5</h5>
+                        <div class="card-header">
+                            <h5 class="card-price">$ 5</h5>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                         <p class="card-text">
                             <span class="disponibilidad disponible">Disponible</span><br>
                             <span class="card-name">Rueda de auto apenas destruida
@@ -403,13 +427,13 @@
     </main>
 
     <!--        Footer      -->
-    <footer>
+    <footer class="ctt-gradient">
         <div class="footer-info">
             <img src="./assets/images/footer/payment.svg" alt="footer info">
             <p class="finfo-title">Elegi como pagar</p>
             <p class="finfo-text">Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con Mercado
                 Crédito.</p>
-            <a class="finfo-a" href="#fs-pago">Como pagar tus compras</a>
+            <a class="text-contrast finfo-a" href="#fs-pago">Como pagar tus compras</a>
         </div>
 
 
@@ -418,14 +442,14 @@
             <p class="finfo-title">Seguridad de calidad</p>
             <p class="finfo-text">¿Vino fallido? ¡Devolvelo! En El Hueson, te tenemos en cuenta,
                 contactanos y nos aseguraremos de tu reembolso.</p>
-            <a class="finfo-a" href="#">Contactanos</a> <!--href to contact-->
+            <a class="text-contrast finfo-a" href="#">Contactanos</a> <!--href to contact-->
         </div>
 
         <div class="footer-info">
             <iframe class="imap"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2432189099077!2d-58.40606631503542!3d-34.59801078745169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0xafb5fe117a2c5a52!2sParaguay%202334%2C%20C1121ABL%20CABA!5e0!3m2!1sen!2sar!4v1687277570057!5m2!1sen!2sar"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <a class="finfo-a" href="https://goo.gl/maps/81XxLMXSjaaveBPq9">Paraguay 2334 5
+            <a class="text-contrast finfo-a" href="https://goo.gl/maps/81XxLMXSjaaveBPq9">Paraguay 2334 5
                 F</a><!--Paraguay 2334 5 F-->
         </div>
 
