@@ -1,12 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Hueson - Contact</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="../styles/style-contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="shortcut icon" href="../images/Pet Shop Logo el hueson.svg" type="image/x-icon" />
 </head>
-<body>
-    
+
+<body style="background-color: #eaeaea;">
+    <!--        HEADER      -->
+    <header>
+        <!--        PC NAVBAR       -->
+        <div class="pc-nav ctt-gradient">
+            <img class="logo" src="../images/petshop_logo.png" alt="logo">
+            <div class="busqueda">
+                <nav class="nav-links">
+                    <div class="dropdown">
+                        <a class="mydropdown dropdown-toggle text-contrast" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a id="jugueteriacontainer" class="dropdown-item"
+                                    href="./jugueteria.html">Jugueteria</a></li>
+                            <li><a id="farmaciacontainer" class="dropdown-item" href="#">Farmacia</a></li>
+                        </ul>
+                    </div>
+                    <a class="text-contrast" href="../../index.html">Tienda <i class="fa-solid fa-shop"></i></a>
+                    <a class="text-contrast" href="./contact.html">Contact <i class="fa-solid fa-address-book"></i></a>
+                    <a class="text-contrast" href="./carrito.html">Mi carrito<i
+                            class="fa-solid fa-cart-shopping"></i></a>
+                </nav>
+            </div>
+        </div>
+
+        <!--        MOBILE NAVBAR       -->
+        <div class="mobile-nav">
+            <input id="toggle" type="checkbox" checked>
+            <label class="toggle-nav" for="toggle"><img class="hamburguer ctt-gradient"
+                    src="../images/iconos/three-bars-white.png"></label>
+
+            <nav class="vertical-nav">
+                <div class="dropdown mobile-anchor ctt-gradient">
+                    <a class="mydropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorias
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="?cat=jugueteria">Jugueteria</a></li>
+                        <li><a class="dropdown-item" href="?cat=farmacia">Farmacia</a></li>
+                    </ul>
+                </div>
+                <a class="mobile-anchor ctt-gradient" href="?#">Tienda <i class="fa-solid fa-shop"></i></a>
+                <a class="mobile-anchor ctt-gradient" href="#">Contact <i class="fa-solid fa-address-book"></i></a>
+                <a class="mobile-anchor ctt-gradient" href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <!--    MAIN    -->
+    <main class="cent">
+        <div class="formulario">
+            <p class="suscribite p-gradient">¡Hace tu consulta!</p>
+            <form class="d-flex flex-column justify-content-start margin" id="formulario1" method="get">
+                <fieldset class="mb-2">
+                    <legend class="contc">Nombre:</legend>
+                    <label for="name"></label>
+                    <input class="alargar caja1" type="text" id="name" name="name" required>
+                </fieldset>
+                <fieldset class="mb-2">
+                    <legend class="contc">Tipo de mascota:</legend>
+                    <label class="perYGato">
+                        <input class="radio1" type="radio" name="pet" value="perro" required> Perro
+                    </label>
+                    <label class="perYGato">
+                        <input class="radio1" type="radio" name="pet" value="gato" required> Gato
+                    </label>
+                </fieldset>
+                <fieldset class="mb-2">
+                    <legend class="contc">Email:</legend>
+                    <label for="email"></label>
+                    <input class="alargar caja2" type="email" id="email" name="mail" required>
+                </fieldset>
+                <fieldset>
+                    <legend class="contc">Consulta:</legend>
+                    <label for="message"></label>
+                    <textarea class="textArea alargar caja3" name="message" id="message" cols="25" rows="10"
+                        required></textarea>
+                </fieldset>
+                <fieldset class="d-flex justify-content-center btn">
+                    <input class="button miBoton p-gradient" type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <!--        Footer      -->
+    <footer class="ctt-gradient">
+        <div class="footer-info">
+            <img src="../images/footer/payment.svg" alt="footer info">
+            <p class="finfo-title">Elegi como pagar</p>
+            <p class="finfo-text">Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con Mercado
+                Crédito.</p>
+            <a class="text-contrast finfo-a" href="#fs-pago">Como pagar tus compras</a>
+        </div>
+
+
+        <div class="footer-info">
+            <img src="../images/footer/shipping.svg" alt="footer info">
+            <p class="finfo-title">Seguridad de calidad</p>
+            <p class="finfo-text">¿Vino fallido? ¡Devolvelo! En El Hueson, te tenemos en cuenta,
+                contactanos y nos aseguraremos de tu reembolso.</p>
+            <a class="text-contrast finfo-a" href="#">Contactanos</a> <!--href to contact-->
+        </div>
+
+        <div class="footer-info">
+            <iframe class="imap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2432189099077!2d-58.40606631503542!3d-34.59801078745169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0xafb5fe117a2c5a52!2sParaguay%202334%2C%20C1121ABL%20CABA!5e0!3m2!1sen!2sar!4v1687277570057!5m2!1sen!2sar"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="text-contrast finfo-a" href="https://goo.gl/maps/81XxLMXSjaaveBPq9">Paraguay 2334 5
+                F</a><!--Paraguay 2334 5 F-->
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cebc15b299.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../javascript/contact.js"></script>
 </body>
+
 </html>
