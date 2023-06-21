@@ -49,8 +49,8 @@ body {
         padding: 0.5rem;
         z-index: 999999999999999;
         position: fixed;
-        top: 0.5rem;
-        right: 0.5rem;
+        top: 1rem;
+        right: 1rem;
         box-shadow: 3px 3px 0.5rem #333;
     }
 
@@ -429,15 +429,19 @@ footer {
 
 /*      MOBILE      */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-    .pc-nav {
+    .nav-links {
         display: none;
+    }
+    .mysearch{
+        margin-right: 5rem;
+        width: auto;
     }
     .mobile-nav{
         display: block;
     }
 
     .carousel-item img {
-        height: 250px;
+        height: 125px;
         object-fit: cover;
     }
 
@@ -449,5 +453,10 @@ footer {
     .fdpago {
         width: 20ch;
         text-align: left;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        gap: 3rem;
     }
 }
