@@ -1,0 +1,143 @@
+:root{
+    --clr-bg: #22A699;
+    --clr-ctt: #F2BE22;
+    --clr-gradient1: #F29727;
+    --clr-gradient2: #F24C3D;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    min-height: 10vh;
+    background-color: #F2BE22;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    margin: 0 2.5rem;
+}
+
+.nav img{
+    height: 7rem;
+    width: 7rem;
+    object-fit: contain;
+    margin-right: 45rem;
+}
+
+
+.cent{
+    background-color: #ebebeb;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-gradient{
+    font-size: 1.125em;
+    margin: 0;
+    padding: 0.5em 2em;
+
+    background: var(--clr-gradient2);
+    background: linear-gradient(90deg, var(--clr-gradient2) 36%, var(--clr-gradient1) 94%);
+    
+    display: flex;
+    align-items: end;
+
+    color: var(--clr-white);
+    font-weight: 500;
+    
+    border-radius: 0.5rem;
+}
+
+.suscribite{
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 0.6rem;
+}
+
+
+.formulario{
+    height: 38rem;
+    width: 40rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn{
+    margin-right: 6rem;
+}
+
+.margin{
+    margin-left: 5rem;
+}
+
+.perYGato{
+    font-size: 0.9rem;
+}
+
+.my-custom-button-class{
+    background-color: #F24C3D !important;
+}
+
+.alargar{
+    width: 25rem;
+}
+
+.foot{
+    min-height: 10vh;
+    background-color: #F2BE22;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.miniIcon{
+    display: flex;
+    gap: 3rem;
+}
+
+.heigt{
+    font-size: 1.7rem;
+}
+
+.footP{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.mapa{
+    height: 5rem;
+    width: 15rem;
+    object-fit: contain;
+}
+
+.formacon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contc{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
