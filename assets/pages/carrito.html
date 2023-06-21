@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Hueson - Carrito</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/assets/styles/cartStyle.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> -->
+  </head>
+  <body>
+    <header>
+      <!--        PC NAVBAR       -->
+      <div class="pc-nav ctt-gradient">
+        <img class="logo" src="../images/petshop_logo.png" alt="logo" />
+        <div class="busqueda">
+          <nav class="nav-links">
+            <a class="text-contrast" href="#">Tienda <i class="fa-solid fa-shop"></i></a>
+            <a class="text-contrast" href="#">Contact <i class="fa-solid fa-address-book"></i></a>
+          </nav>
+        </div>
+      </div>
+
+      <!--        MOBILE NAVBAR       -->
+      <div class="mobile-nav">
+        <input id="toggle" type="checkbox" checked />
+        <label class="toggle-nav" for="toggle"><img class="hamburguer ctt-gradient" src="../images/iconos/three-bars-white.png" /></label>
+
+        <nav class="vertical-nav">
+          <a class="mobile-anchor ctt-gradient" href="#">Tienda <i class="fa-solid fa-shop"></i></a>
+          <a class="mobile-anchor ctt-gradient" href="contact.html">Contact <i class="fa-solid fa-address-book"></i></a>
+        </nav>
+      </div>
+    </header>
+    <div class="card">
+      <div id="cart">
+        <div class="title">
+          <div class="row">
+            <div id="titulo" class="col">
+              <h4><b>Carrito de compras</b></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="summary">
+        <div>
+          <h2>Resumen</h2>
+        </div>
+
+        <form>
+          <p>Datos de envio:</p>
+          <input id="summaryInput" placeholder="Nombre y apellido" />
+          <input id="summaryInput" placeholder="Direccion" />
+          <input id="summaryInput" type="email" placeholder="e-mail" />
+          <p>Codigo de descuento:</p>
+          <input id="code" placeholder="ingrese su codigo" />
+        </form>
+        <div class="row">
+          <div class="col" style="padding-left: 1">Cantidad de productos:</div>
+          <div class="productCount">
+            <div class="col" id="productCount"></div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col">Precio total</div>
+          <div class="col" id="cartPrice"></div>
+        </div>
+        <button class="btn">COMPRAR</button>
+      </div>
+    </div>
+    <footer class="ctt-gradient">
+      <div class="footer-info">
+        <img src="../images/footer/payment.svg" alt="footer info" />
+        <p class="finfo-title">Elegi como pagar</p>
+        <p class="finfo-text">Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con Mercado Crédito.</p>
+        <a class="text-contrast finfo-a" href="#fs-pago">Como pagar tus compras</a>
+      </div>
+
+      <div class="footer-info">
+        <img src="../images/footer/shipping.svg" alt="footer info" />
+        <p class="finfo-title">Seguridad de calidad</p>
+        <p class="finfo-text">¿Vino fallido? ¡Devolvelo! En El Hueson, te tenemos en cuenta, contactanos y nos aseguraremos de tu reembolso.</p>
+        <a class="text-contrast finfo-a" href="#">Contactanos</a>
+        <!--href to contact-->
+      </div>
+
+      <div class="footer-info">
+        <iframe
+          class="imap"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2432189099077!2d-58.40606631503542!3d-34.59801078745169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0xafb5fe117a2c5a52!2sParaguay%202334%2C%20C1121ABL%20CABA!5e0!3m2!1sen!2sar!4v1687277570057!5m2!1sen!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <a class="text-contrast finfo-a" href="https://goo.gl/maps/81XxLMXSjaaveBPq9">Paraguay 2334 5 F</a
+        ><!--Paraguay 2334 5 F-->
+      </div>
+    </footer>
+
+    <!-- <script src="data.js"></script> -->
+    <script src="detalles.js"></script>
+    <script src="carrito.js"></script>
+    <script src="https://kit.fontawesome.com/cebc15b299.js" crossorigin="anonymous"></script>
+  </body>
 </html>
