@@ -7,21 +7,26 @@ const noResultsMessage = document.getElementById("no-results-message");
 function imprimirCards(cards, container) {
     let plantilla = "";
     for (const card of cards) {
-      plantilla += `<div class="card">
-        <a href="./assets/pages/detalles.html?id=${card._id}" >
+      plantilla += `
+    
+    <div class="card">
+        <a href="../pages/detalles.html?id=${card._id}">
             <img src="${card.imagen}" class="card-img-top" alt="rueda">
         </a>
         <div class="card-body">
-            <h5 class="card-price">$${card.precio}</h5>
+            <div class="card-header">
+                <h5 class="card-price">$${card.precio}</h5>
+                <button class="add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
             <p class="card-text">
                 <span class="disponibilidad disponible">${card.producto}</span><br>
                 <span class="card-name">${card.descripcion}</span>
             </p>
         </div>
     </div>`;
-    }
-    container.innerHTML = plantilla;
   }
+  container.innerHTML = plantilla;
+}
   
   function mostrarCard(data) {
     if (data.length === 0) {
